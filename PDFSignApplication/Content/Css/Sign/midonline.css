@@ -1,0 +1,166 @@
+﻿@charset "UTF-8";
+sssstest {
+    display:none;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("../../Images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans TC", "微軟正黑體", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url("../../Images/bg_md.jpg");
+    background-position: center bottom;
+  }
+}
+
+h2 {
+  color: #666666;
+  font-size: 1.8rem;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h6 {
+  color: #989898;
+  font-weight: bold;
+}
+
+#mid-logo {
+  background-image: url("../../Images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  margin-top: 30px;
+  width: 150px;
+  height: 75px;
+}
+@media (min-width: 768px) {
+  #mid-logo {
+    position: absolute;
+    left: 67px;
+    top: 2.5625rem;
+    margin: 0;
+    width: 175px;
+    height: 88px;
+  }
+}
+@media (min-width: 992px) {
+  #mid-logo {
+    position: absolute;
+    left: 77px;
+    top: 2.5rem;
+    margin: 0;
+    width: 200px;
+    height: 100px;
+  }
+}
+
+.mid-box {
+  border: 1px solid #7a7a7a !important;
+}
+@media (min-width: 366px) {
+  .mid-box {
+    max-width: 18.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.mid-card {
+  border: none;
+  background: none;
+}
+.mid-notice {
+  position: relative;
+  padding: 0.25rem 1rem;
+  border: 1px solid #989898;
+  color: #989898;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+@media (min-width: 366px) {
+  .mid-notice {
+    font-size: 1rem;
+  }
+}
+.mid-term {
+  font-size: x-small;
+}
+@media (min-width: 768px) {
+  .mid-term {
+    font-size: 0.9rem;
+  }
+}
+.mid-memo {
+  font-size: small;
+  color: #fa2c53;
+}
+.mid-form hr {
+  border-color: #c0c0c0;
+}
+.mid-form .form-control {
+  border-color: #7a7a7a;
+  color: #989898;
+}
+.mid-form .form-control::-webkit-input-placeholder {
+  color: #989898;
+}
+.mid-form .form-control::-moz-placeholder {
+  color: #989898;
+}
+.mid-form .form-control:-ms-input-placeholder {
+  color: #989898;
+}
+.mid-form .form-control::-ms-input-placeholder {
+  color: #989898;
+}
+.mid-form .form-control::placeholder {
+  color: #989898;
+}
+.mid-form .col-form-label {
+  color: #989898;
+  font-size: small;
+}
+@media (min-width: 366px) {
+  .mid-form .col-form-label {
+    font-size: inherit;
+  }
+}
+.mid-form .form-control-plaintext {
+  color: #989898;
+  font-weight: bolder;
+  font-size: small;
+}
+@media (min-width: 366px) {
+  .mid-form .form-control-plaintext {
+    font-size: inherit;
+  }
+}
+.mid-hide {
+  position: absolute;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.mid-show {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  animation: fade 0.35s;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+}
+
+/*# sourceMappingURL=midonline.css.map */

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上文件檢核</title>
+
+
+    @Styles.Render("~/Content/cssfile")
+    @Styles.Render("~/Content/css/Sign/File")
+    
+    <link rel="stylesheet" href="~/fonts/css/font-awesome.css" />
+    @Scripts.Render("~/Content/scriptsfile")
+    @Scripts.Render("~/Content/scriptsfile2")
+
+
+    @RenderSection("Scripts", required: false)
+
+    @RenderSection("Styles", required: false)
+
+    <style>
+        .header {
+            background-color: white;
+            border-top: 2px solid #e1e1e1;
+            box-shadow: 2px 2px 4px #666666;
+            overflow: hidden;
+        }
+
+        .header a {
+            float: left;
+            text-align: center;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="header">
+        <a href="/">
+            <img src="~/Content/Images/logo.png" alt="首頁" style="margin:6px; max-width:100px">
+        </a>
+    </div>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

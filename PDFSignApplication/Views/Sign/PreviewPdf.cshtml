@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewBag.Title = "Preview";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section Scripts{
+
+    @*pdf.js無法bundle 且 IE無法使用*@
+    <script type="text/javascript" src="~/Content/Scripts/pdfjs/build/pdf.js"></script>
+    <script type="text/javascript" src="~/Content/Scripts/pdfjs/build/pdf.worker.js"></script>
+
+    <script>
+        function checkBtn() {
+            var checkedValue = $('#flexCheckDefault:checked').val();
+            if (checkedValue == '1') {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        $(function () {
+
+            $("#btnHintCancel").click(function () {
+                $("#ReturnCode").val("F");
+                document.forms["SignResult"].submit();
+            });
+
+            $("#btnHintOk").click(function () {
+                if (checkBtn()) {
+                    $("#ReturnCode").val("S");
+                    document.forms["SignResult"].submit();
+                }
+                else {
+                    alert("請勾選已完成申請文件閱覽");
+                }
+            });
+
+        })
+
+
+    </script>
+
+}
+
+@section Styles{
+    <style>
+        .header {
+            background-color: white;
+            border-top: 5px solid red;
+            box-shadow: 2px 2px 4px #666666;
+            overflow: hidden;
+        }
+
+            .header a {
+                float: left;
+                text-align: center;
+            }
+
+        .tel {
+            float: right;
+            color: #666666;
+            text-align: left;
+            margin-right: 10px;
+        }
+
+        [class*="height-"] {
+            height: 360px;
+        }
+
+        #the-canvas {
+            border: 1px solid black;
+            direction: ltr;
+            width: 100%;
+            max-width: 690px;
+        }
+
+        .canvasDiv {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        @@media only screen and (min-width: 600px) {
+            /* For tablets: */
+            .height-s-1 {
+                height: 480px;
+            }
+        }
+
+        @@media only screen and (min-width: 768px) {
+            /* For desktop: */
+            .height-1 {
+                height: 620px;
+            }
+        }
+    </style>
+}
+
+<div id="divLoading">
+    <div class="col mt-4">
+        <h6 class="text-center col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-3">電子文件檢核</h6>
+        <div class="col col-md-8 offset-md-2 col-lg-10 offset-lg-1 col-xl-12 offset-xl-0"><hr></div>
+    </div>
+    <div class="text-center">
+        <div class="height-1 height-s-1 canvasDiv">
+            <iframe id="pdfiframe" width="100%" height="100%" margin="200px" src="~/Content/Scripts/pdfjs/web/viewer.html?file=@Url.Action("OpenPdf", "Pdf")"></iframe>
+        </div>
+    </div>
+    <div class="text-left">
+        <div class="form-check" style="padding-top:6px">
+            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                本人已完成文件閱覽
+            </label>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="form-row">
+            <div class="col-5 offset-1 col-md-4 offset-md-2">
+                <button type="button" id="btnHintCancel" class="btn btn-block">
+                    <img src="~/Content/Images/btn_cancel.png">
+                </button>
+            </div>
+            <div class="col-5 col-md-4">
+                <button type="button" id="btnHintOk" class="btn btn-block">
+                    <img src="~/Content/Images/btn_continue.png">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <form id="SignResult" name="SignResult" action="@Url.Action(@ViewBag.SignResult.ToString(), "Sign")" method="post" hidden>
+        執行結果:<input id="ReturnCode" name="ReturnCode" value="" /><br>
+        結果訊息:<input id="ReturnCodeDesc" name="ReturnCodeDesc" value="" /><br>
+    </form>
+
+</div>
+

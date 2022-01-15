@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "SignResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+    <style>
+        .header {
+            background-color: white;
+            border-top: 5px solid red;
+            box-shadow: 2px 2px 4px #666666;
+            overflow: hidden;
+        }
+
+            .header a {
+                float: left;
+                text-align: center;
+            }
+
+        .tel {
+            float: right;
+            color: #666666;
+            text-align: left;
+            margin-right: 10px;
+        }
+    </style>
+}
+
+
+@model PDFSignApplication.ViewModels.Sign.SignResultViewModel
+
+@if (Model.Status)
+{
+    <div class="row mid-show" id="divContent">
+        <div class="col mt-5">
+            <h3 class="text-center">結果通知</h3>
+            <div class="col col-md-8 offset-md-2 col-lg-10 offset-lg-1 col-xl-12 offset-xl-0"><hr></div>
+        </div>
+        <div class="col-12 text-center">
+            <img src="~/Content/Images/result_finish.png" alt="finish">
+            <h4 class="text-center col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-3">已完成</h4>
+        </div>
+    </div>
+
+}
+else
+{
+    <div class="row mid-show" id="divContent">
+        <div class="col mt-5">
+            <h3 class="text-center">結果通知</h3>
+            <div class="col col-md-8 offset-md-2 col-lg-10 offset-lg-1 col-xl-12 offset-xl-0"><hr></div>
+        </div>
+        <div class="col">
+            <div class="text-center">
+                <img src="~/Content/Images/result_attention.png" alt="attention">
+                <h4 class="text-center col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-3" style="color:red">未完成</h4>
+            </div>
+
+        </div>
+    </div>
+}
+

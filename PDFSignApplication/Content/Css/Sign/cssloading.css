@@ -1,0 +1,158 @@
+.cssload-wrap {
+  padding: 80px 0;
+  align-self: center;
+}
+
+.cssload-wrap > div {
+  left: calc(50% - 97px);
+  position: relative;
+  background-color: rgb(255,255,255);
+  width: 195px;
+  height: 195px;
+  border-radius: 100%;
+  -ms-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  overflow: hidden;
+  color: rgb(0,0,0);
+}
+
+.cssload-wrap > div:nth-child(2) {
+  width: 175px;
+  height: 175px;
+  top: -185px;
+  left: calc(50% - 88px);
+  line-height: 175px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.cssload-wrap > div div {
+  width: 146px;
+  height: 146px;
+  border-radius: 100%;
+  -ms-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  filter: blur(29px);
+  -ms-filter: blur(29px);
+  -webkit-filter: blur(29px);
+  -moz-filter: blur(29px);
+  position: absolute;
+}
+
+.cssload-wrap > div div:nth-child(1) {
+  background-color: red;
+  animation: cssload-move 1.8s;
+  -o-animation: cssload-move 1.8s;
+  -ms-animation: cssload-move 1.8s;
+  -webkit-animation: cssload-move 1.8s;
+  -moz-animation: cssload-move 1.8s;
+  animation-delay: 2.16s;
+  -o-animation-delay: 2.16s;
+  -ms-animation-delay: 2.16s;
+  -webkit-animation-delay: 2.16s;
+  -moz-animation-delay: 2.16s;
+  animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+
+.cssload-wrap > div div:nth-child(2) {
+  background-color: green;
+  animation: cssload-move 1.35s;
+  -o-animation: cssload-move 1.35s;
+  -ms-animation: cssload-move 1.35s;
+  -webkit-animation: cssload-move 1.35s;
+  -moz-animation: cssload-move 1.35s;
+  animation-delay: 0s;
+  -o-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+
+.cssload-wrap > div div:nth-child(3) {
+  background-color: blue;
+  animation: cssload-move 2.7s;
+  -o-animation: cssload-move 2.7s;
+  -ms-animation: cssload-move 2.7s;
+  -webkit-animation: cssload-move 2.7s;
+  -moz-animation: cssload-move 2.7s;
+  animation-delay: 1.44s;
+  -o-animation-delay: 1.44s;
+  -ms-animation-delay: 1.44s;
+  -webkit-animation-delay: 1.44s;
+  -moz-animation-delay: 1.44s;
+  animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+
+.cssload-wrap > div div:nth-child(4) {
+  background-color: yellow;
+  animation: cssload-move 2.25s;
+  -o-animation: cssload-move 2.25s;
+  -ms-animation: cssload-move 2.25s;
+  -webkit-animation: cssload-move 2.25s;
+  -moz-animation: cssload-move 2.25s;
+  animation-delay: 0.72s;
+  -o-animation-delay: 0.72s;
+  -ms-animation-delay: 0.72s;
+  -webkit-animation-delay: 0.72s;
+  -moz-animation-delay: 0.72s;
+  animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+
+@keyframes cssload-move {
+  0%, 100% {
+    top: 0%;
+    left: 0%;
+  }
+  25% {
+    top: 0%;
+    left: 50%;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  75% {
+    top: 50%;
+    left: 0%;
+  }
+}
+
